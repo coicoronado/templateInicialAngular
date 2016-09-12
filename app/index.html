@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="es" ng-app="myApp" class="no-js" > <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PopSpace</title>
+    <meta name="description" content="Unlock spaces around you. The market for productive space. Save money by sharing. Save money by booking.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+    <!--  min styles of all the scss-->
+    <link rel="stylesheet" href="assets/css/build/myApp.min.css">
+    <link rel="stylesheet" href="assets/css/build/vendorStyles.min.css">
+    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <!--  Scripts of the statics and vendors-->
+    <script src="assets/js/build/scriptsStatics.min.js"></script>
+    <!-- Uncomment only when you figured out the server side config -->
+    <!-- <base href="/"> -->
+    <!-- All the related icons for the site -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/assets/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+  </head>
+
+  <body ng-controller="AppController" data-ng-init="init()">
+
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- Header Block shared across all views -->
+    <div ng-controller="HeaderController" class="sharedContent">
+      <myapp-header ng-if="showHeadFoot" class="shared"></myapp-header>
+    </div>
+
+    <!--  Main block where is going to be render every module of the app-->
+    <div ng-view class="viewContentAngular"></div>
+
+    <!--  Footer Block shared across all views -->
+    <div ng-controller="FooterController" class="sharedContent">
+      <myapp-footer ng-if="showHeadFoot" class="shared"></myapp-footer>
+    </div>
+
+    <!-- In production use:
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+    -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+  	<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+  	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+  	<script src="bower_components/jquery-validate/dist/jquery.validate.min.js"></script>
+  	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!--  Script for my main configs of the app-->
+    <script src="app.js"></script>
+    <!--  Script for all my controllers -->
+    <script src="assets/js/build/scriptsComponentsShared.min.js"></script>
+
+      </body>
+</html>

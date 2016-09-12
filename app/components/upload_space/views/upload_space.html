@@ -1,0 +1,1168 @@
+<main>
+    <div class='container'>
+      <div class='host__section'>
+        <div class="uploadspace__tabs flex__item">
+              <h1 class="upload-title">Publicar un espacio</h1>
+              <form id="rootwizard" method="post" action="" class="form-horizontal form-wizard">
+                  
+                    <div class="steps-progress">
+                      <div class="progress-indicator"></div>
+                    </div>
+                    
+                    <ul class="col-xs-12 progressUl">
+                      <li class="completed">
+                        <a href="#tab1" data-toggle="tab"><span>1</span>{% trans "Description" %}</a>
+                      </li>
+                      <li class="completed">
+                        <a href="#tab2" data-toggle="tab"><span>2</span>{% trans "Location" %}</a>
+                      </li>
+                      <li class="active">
+                        <a href="#tab3" data-toggle="tab"><span>3</span>{% trans "Availability" %}</a>
+                      </li>
+                      <li class="">
+                        <a href="#tab4" data-toggle="tab"><span>4</span>{% trans "Amenities" %}</a>
+                      </li>
+                      <li class="">
+                        <a href="#tab5" data-toggle="tab"><span>5</span>{% trans "Details" %}</a>
+                      </li>
+                      <li id="lastCatItm" class="">
+                        <a id="lastCatItmChild" href="#tab6" data-toggle="tab"><span>6</span>{% trans "Photos" %}</a>
+                      </li>
+                    </ul>
+                  
+                  <div id="tabContent" class="tab-content">
+                    
+                    <div class="tab-pane" id="tab1">
+                        <div id="infoDescripts" class="row">
+                          <div id="spaceName" class="form-group col-xs-3 col-xs-offset-1 textAreaFirst">
+                              <label for="form-el-1">Nombre del Espacio</label>
+                              <div class="help-block">
+                                <p>Ponle un nombre llamativo y fácil a tu espacio</p>
+                               </div> 
+                              <textarea id="form-el-1" type="text" class="form-control textAreaFirstChild" rows="3" placeholder="Nombre del espacio"></textarea>
+                            </div>
+                            <div id="spaceCapacity" class="form-group col-xs-3 textAreaFirst">
+                              <label for="form-el-2">Capacidad máxima de <br> personas</label>
+                              <div class="help-block">
+                                <p>¿Cuántas personas pueden <br> estar en el espacio?</p>
+                               </div> 
+                              <textarea id="form-el-2" class="form-control textAreaFirstChild" rows="3" placeholder="Número máximo de usuarios"></textarea>
+                            </div>
+                            <div id="spaceLabels" class="form-group col-xs-4 textAreaFirst">
+                              <label for="form-el-3">Etiquetas</label>
+                              <div class="help-block">
+                                <p>Agrega etiquetas para describir atributos distintivos, <br>
+                              actividades potenciales o posibles usuarios</p>
+                             </div> 
+                              <!-- <textarea id="form-el-3" class="form-control textAreaFirstChild lastTextAreaOfFC" rows="3" placeholder="Ejemplos: jardín, fiesta, sociales, diversión, etc."></textarea> -->
+                              <input id="form-el-3" type="text" value="" class="form-control tagsinput textAreaFirstChild" placeholder="Ejemplos: jardín, fiesta, sociales, diversión, etc." />
+                            </div>
+                        </div>
+
+                        <div id="spaceType" class="row-fluid">
+
+                            <div id="eventsType" class="col-xs-3 eventsType" role="group">
+                              <button type="button" class="btn btn-lg btn-head spaceTyeBtn"><span class="glyphicon glyphicon-warning-sign"></span> + text</button>
+                              <button type="button" class="btn spaceTyeBtn">Middle</button>
+                              <button type="button" class="btn spaceTyeBtn">Right</button>
+                              <button type="button" class="btn spaceTyeBtn">Left</button>
+                              <button type="button" class="btn spaceTyeBtn">Middle</button>
+                              <button type="button" class="btn spaceTyeBtn">Right</button>
+                              <button type="button" class="btn spaceTyeBtn">Left</button>
+                              <button type="button" class="btn spaceTyeBtn">Middle</button>
+                              <button type="button" class="btn spaceTyeBtn">Right</button>
+                            </div>
+
+                            <div class="col-xs-3 eventsType" role="group">
+                              <button type="button" class="btn btn-lg btn-head spaceTyeBtn"><span class="glyphicon glyphicon-warning-sign"></span> + text</button>
+                              <button type="button" class="btn spaceTyeBtn">Middle</button>
+                              <button type="button" class="btn spaceTyeBtn">Right</button>
+                              <button type="button" class="btn spaceTyeBtn">Left</button>
+                              <button type="button" class="btn spaceTyeBtn">Middle</button>
+                              <button type="button" class="btn spaceTyeBtn">Right</button>
+                              <button type="button" class="btn spaceTyeBtn">Left</button>
+                              <button type="button" class="btn spaceTyeBtn">Middle</button>
+                              <button type="button" class="btn spaceTyeBtn">Right</button>
+                            </div>
+                            
+                            <div class="col-xs-4">
+                              
+                            </div>
+
+                        </div>
+                        <div class="row-fluid">
+                          <div class="col-xs-12">
+                            <ul class="pager wizard  downButtons">
+                                <li class="next">
+                                  <a href="#" id="firstNextBtn" class="nextButton">Next</a>
+                                </li>
+                            </ul>
+                          </div>
+                         </div> 
+                    </div>
+
+
+                    <div class="tab-pane" id="tab2">
+                      <div class="container-fluid">
+                        <div id="locationFormContainer" class="row">
+                          <div class="col-xs-12 col-sm-8 col-sm-offset-1 col-md-5 locationForm">
+                            <div id="spaceLocation" class="row">
+                              <label id="locLabel" for="locationData">Dirección del espacio</label>
+                              <p id="locHelpB" class="help-block">Escribe la dirección de tu espacio. Esta solo se mostrará al invitado cuando haya quedado hecha la reservación</p>
+                              <div class="col-xs-7">
+                                <input id="locInStr" type="text" placeholder="Calle">
+                                <input id="locInCol" type="text" placeholder="Colonia">
+                                <input id="locInCoun" type="text" placeholder="País">
+                              </div>
+                              <div class="col-xs-5">
+                                <div class="row">
+                                  <div id="locInAdN" class="col-xs-6">
+                                    <input type="text" placeholder="Número">
+                                  </div>
+                                  <div id="locInAIN" class="col-xs-6">
+                                    <input type="text" placeholder="Interior">
+                                  </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                      <input type="text" id="locInZC" placeholder="Código Postal">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                      <input type="text" id="locInCity" placeholder="Ciudad">
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row-fluid">
+                              <div id="ParkingDiv" class="col-xs-10">
+                                <label id="locLabPark" for="locationParking">Estacionamiento disponible para este espacion</label>
+                                <p id="locHelBPark" class="help-block">¿Tu espacio cuenta con estacionamiento gratuito?</p>
+                                <!-- <div id="defineParking">
+                                  <select id="locSelYN">
+                                    <option value="Si">Sí</option>
+                                    <option value="No">No</option>
+                                  </select>
+                                  <input type="number" id="carsNumber" placeholder="¿Para cuantos coches?">
+                                </div> -->
+                                <div id="defineParking">
+                                    <select name="test" class="selectboxit" data-first-option="true">
+                                      <option value="Si"> Sí</option>
+                                      <option value="No"> No</option>
+                                    </select>
+                                    <input type="number" id="carsNumber" placeholder="¿Para cuantos coches?">
+                                </div> 
+                              </div>
+                            </div>
+                          </div>
+                          <div id="locMap" class="col-xs-12 col-sm-8 col-sm-offset-1 col-md-6 col-md-offset-0 mapLocation">
+                            <div id="mapDiv" class="col-xs-12">
+                                <label id="mapLabPark" for="locationParking">Ubicación del Espacio</label>
+                                <p id="mapHelBPark" class="help-block">¿Verifica si la localización del espacio es correcta. Puedes arrastrar el marcador para ajustar la ubicación.</p>
+                                <div id="map">
+                                  Mapa
+                                  <!-- <img src="" alt=""> -->
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                        <!-- ///botones inferiores -->
+                        <div class="row-fluid">
+                          <div class="col-xs-12">
+                             <ul class="pager wizard  downButtons">
+                                <li class="previous">
+                                  <a href="#">Previous</a>
+                                </li>
+                                
+                                <li class="next">
+                                  <a href="#">Next</a>
+                                </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>   
+                    </div> 
+
+
+                    <div class="tab-pane active" id="tab3">
+                        <div class="row-fluid" id="availabiltyArea">
+                            <div class="col-xs-12 col-md-7 col-md-offset-1 daysHrsDef">
+                              <div id="weekSel" class="col-xs-12">
+                                <label id="weekSelLabel" for="locationParking">Disponibilidad del Espacio</label>
+                                <p id="weekSelHelB" class="help-block">Selecciona los días de la semana y el horario en que tu espacio esté disponible. Puedes seleccionar uno o varios dias al mismo tiempo, o puedes determinar si quieres rentar en un dia multiples horarios.</p>
+                                <div id="timeListsCont">
+                                  <ul class="days">
+                                    <li class="daysItm"><button class="weekDay">LUN</button></li>
+                                    <li class="daysItm"><button class="weekDay">MAR</button></li>
+                                    <li class="daysItm"><button class="weekDay">MIE</button></li>
+                                    <li class="daysItm"><button class="weekDay">JUE</button></li>
+                                    <li class="daysItm"><button class="weekDay">VIE</button></li>
+                                    <li class="daysItm"><button class="weekDay">SAB</button></li>
+                                    <li class="daysItm"><button class="weekDay">DOM</button></li>
+                                  </ul>
+
+                                  <div class="row dayTimeDef">
+                                    <div class="col-xs-6 col-md-2 hrsDefContain">
+                                        <label id="hrsDefLabs" for="">Desde</label>
+                                        <!-- <div class="caret-cont">
+                                          <i class="fa fa-caret-down caret-Down" aria-hidden="true"></i>
+                                          <select id="from">
+                                          <option value="">1 Hora</option>
+                                          <option value="">2 Horas</option>
+                                          <option value="">3 Horas</option>
+                                          <option value="">4 Horas</option>
+                                          <option value="">5 Horas</option>
+                                          <option value="">6 Horas</option>
+                                          <option value="">7 Horas</option>
+                                          <option value="">8 Horas</option>
+                                          <option value="">9 Horas</option>
+                                          <option value="">10 Horas</option>
+                                          <option value="">11 Horas</option>
+                                          <option value="">12 Horas</option>
+                                          <option value="">13 Horas</option>
+                                          <option value="">14 Horas</option>
+                                          <option value="">15 Horas</option>
+                                          <option value="">16 Horas</option>
+                                          <option value="">17 Horas</option>
+                                          <option value="">18 Horas</option>
+                                          <option value="">19 Horas</option>
+                                          <option value="">20 Horas</option>
+                                          <option value="">21 Horas</option>
+                                          <option value="">22 Horas</option>
+                                          <option value="">23 Horas</option>
+                                          <option value="">24 Hora</option>
+                                          </select>
+                                        </div> -->
+                                        <div class="mySelect">
+                                          <div id="firstBox" class="theBox">
+                                            <p class="firstItm"></p>
+                                            <span class="arrow">
+                                              <i class="fa fa-caret-down BottCaret-Down" aria-hidden="true"></i>
+                                            </span>
+                                          </div>
+                                          <ul id="fakeSelect" class="fakeSel">
+                                            <li class="itm"><p class="itmBox">1 Hora</p></li>
+                                            <li class="itm"><p class="itmBox">2 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">3 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">4 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">5 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">6 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">7 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">8 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">9 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">10 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">11 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">12 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">13 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">14 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">15 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">16 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">17 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">18 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">19 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">20 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">21 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">22 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">23 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">24 Hora</p></li>
+                                          </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-md-2 hrsDefContain">
+                                        <label id="hrsDefLabs" for="">Hasta</label>
+                                        <!-- <div class="caret-cont">
+                                          <i class="fa fa-caret-down caret-Down" aria-hidden="true"></i>
+                                          <select id="until">
+                                            <option value="">1 Hora</option>
+                                            <option value="">2 Horas</option>
+                                            <option value="">3 Horas</option>
+                                            <option value="">4 Horas</option>
+                                            <option value="">5 Horas</option>
+                                            <option value="">6 Horas</option>
+                                            <option value="">7 Horas</option>
+                                            <option value="">8 Horas</option>
+                                            <option value="">9 Horas</option>
+                                            <option value="">10 Horas</option>
+                                            <option value="">11 Horas</option>
+                                            <option value="">12 Horas</option>
+                                            <option value="">13 Horas</option>
+                                            <option value="">14 Horas</option>
+                                            <option value="">15 Horas</option>
+                                            <option value="">16 Horas</option>
+                                            <option value="">17 Horas</option>
+                                            <option value="">18 Horas</option>
+                                            <option value="">19 Horas</option>
+                                            <option value="">20 Horas</option>
+                                            <option value="">21 Horas</option>
+                                            <option value="">22 Horas</option>
+                                            <option value="">23 Horas</option>
+                                            <option value="">24 Hora</option>
+                                          </select>
+                                        </div>  --> 
+                                        <div class="mySelect">
+                                          <div id="secBox" class="theBox">
+                                            <p class="firstItm2"></p>
+                                            <span class="arrow">
+                                              <i class="fa fa-caret-down BottCaret-Down" aria-hidden="true"></i>
+                                            </span>
+                                          </div>
+                                          <ul id="fakeSelect" class="fakeSel2">
+                                            <li class="itm"><p class="itmBox">1 Hora</p></li>
+                                            <li class="itm"><p class="itmBox">2 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">3 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">4 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">5 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">6 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">7 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">8 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">9 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">10 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">11 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">12 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">13 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">14 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">15 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">16 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">17 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">18 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">19 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">20 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">21 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">22 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">23 Horas</p></li>
+                                            <li class="itm"><p class="itmBox">24 Hora</p></li>
+                                          </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-md-3 hrsDefContain">
+                                      <label id="hrsDefLabs" for="">Precio por Hora</label>
+                                      <input type="number" id="dayPrice" placeholder="$">
+                                    </div>
+                                    <div class="col-xs-6 col-md-3 hrsDefContain">
+                                      <button id="addSpacesTime">Enviar</button>
+                                    </div>
+                                  </div>
+
+                                </div>
+                              </div>
+                            </div>
+                            <div id="minDayHrs" class="col-xs-12 col-md-4 col-lg-3">
+                              <label id="dayHrsLabel" for="locationParking">Número de Horas Mínimas de Renta</label>
+                              <p id="dayHrsHelB" class="help-block">¿Necesitas que tu espacio se rente por un mínimo de horas? Anotalas aquí.</p>
+                              <div class="hrsSelect">
+                                <!-- <div class="bottomAvailCaret-cont">
+                                  <i class="fa fa-caret-down BottCaret-Down" aria-hidden="true"></i>
+                                  <select id="timeHrs">
+                                  <option value="">1 Hora</option>
+                                  <option value="">2 Horas</option>
+                                  <option value="">3 Horas</option>
+                                  <option value="">4 Horas</option>
+                                  <option value="">5 Horas</option>
+                                  <option value="">6 Horas</option>
+                                  <option value="">7 Horas</option>
+                                  <option value="">8 Horas</option>
+                                  <option value="">9 Horas</option>
+                                  <option value="">10 Horas</option>
+                                  <option value="">11 Horas</option>
+                                  <option value="">12 Horas</option>
+                                  <option value="">13 Horas</option>
+                                  <option value="">14 Horas</option>
+                                  <option value="">15 Horas</option>
+                                  <option value="">16 Horas</option>
+                                  <option value="">17 Horas</option>
+                                  <option value="">18 Horas</option>
+                                  <option value="">19 Horas</option>
+                                  <option value="">20 Horas</option>
+                                  <option value="">21 Horas</option>
+                                  <option value="">22 Horas</option>
+                                  <option value="">23 Horas</option>
+                                  <option value="">24 Hora</option>
+                                  </select>
+                                </div> -->
+                                <div class="mySelectLast">
+                                  <div id="thirdBox" class="theBox">
+                                    <p class="firstItm3"></p>
+                                    <span class="arrow">
+                                      <i class="fa fa-caret-down BottCaret-DownBig" aria-hidden="true"></i>
+                                    </span>
+                                  </div>
+                                  <ul id="fakeSelect" class="fakeSel3">
+                                    <li class="itm"><p class="itmBox">1 Hora</p></li>
+                                    <li class="itm"><p class="itmBox">2 Horas</p></li>
+                                    <li class="itm"><p class="itmBox">3 Horas</p></li>
+                                    <li class="itm"><p class="itmBox">4 Horas</p></li>
+                                    <li class="itm"><p class="itmBox">5 Horas</p></li>
+                                    <li class="itm"><p class="itmBox">6 Horas</p></li>
+                                    <li class="itm"><p class="itmBox">7 Horas</p></li>
+                                    <li class="itm"><p class="itmBox">8 Horas</p></li>
+                                    <li class="itm"><p class="itmBox">9 Horas</p></li>
+                                    <li class="itm"><p class="itmBox">10 Horas</p></li>
+                                    <li class="itm"><p class="itmBox">11 Horas</p></li>
+                                    <li class="itm"><p class="itmBox">12 Horas</p></li>
+                                    <li class="itm"><p class="itmBox">13 Horas</p></li>
+                                    <li class="itm"><p class="itmBox">14 Horas</p></li>
+                                    <li class="itm"><p class="itmBox">15 Horas</p></li>
+                                    <li class="itm"><p class="itmBox">16 Horas</p></li>
+                                    <li class="itm"><p class="itmBox">17 Horas</p></li>
+                                    <li class="itm"><p class="itmBox">18 Horas</p></li>
+                                    <li class="itm"><p class="itmBox">19 Horas</p></li>
+                                    <li class="itm"><p class="itmBox">20 Horas</p></li>
+                                    <li class="itm"><p class="itmBox">21 Horas</p></li>
+                                    <li class="itm"><p class="itmBox">22 Horas</p></li>
+                                    <li class="itm"><p class="itmBox">23 Horas</p></li>
+                                    <li class="itm"><p class="itmBox">24 Hora</p></li>
+                                  </ul>
+                                </div>  
+                              </div>
+                            </div>
+                        </div>
+
+                        <!-- authorized dates -->
+                        <div id="authArea" class="row-fluid">
+                          <div id="authTicket" class="col-xs-12 col-md-7 col-md-offset-1">
+                            <label for="" class="authDatesLab">Fechas disponibles</label>
+                              <div class="date-tag row-fluid">
+                                <div class="col-xs-3 authDetail authDay">Martes</div>
+                                <div class="col-xs-4 authDetail authPPHr">$500.00 Por Hora</div>
+                                <div class="col-xs-4 authDetail timeRange">13:00-22:00Hrs</div>
+                                <div class="col-xs-1 authDetail cancelDiv">
+                                  <div class="cancel">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                  </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- botones inferiores -->   
+                        <div class="row-fluid">
+                          <div class="col-xs-12">
+                            <ul class="pager wizard  downButtons">
+                                <li class="previous">
+                                  <a href="#">Previous</a>
+                                </li>
+                                
+                                <li class="next">
+                                  <a href="#">Next</a>
+                                </li>
+                            </ul> 
+                          </div>
+                        </div>                                     
+                    </div>
+
+
+                    <div class="tab-pane" id="tab4">
+                        <div id="servicesLists" class="row">
+                          <div id="instServ" class="col-md-3 col-md-offset-1 serviceArea">
+                              <label for="" id="instLab">Instalaciones</label>
+                              <p id="instHelB" class="help-block">Selecciona una o varias instalaciones con las que cuenta tu espacio haciendo click a continuación.</p>
+                              <ul class="servicesList">
+                                <li class="serviceItem"><button class="serBtnItm">Instalation Service</button></li>
+                                <li class="serviceItem"><button class="serBtnItm">Instalation Service</button></li>
+                                <li class="serviceItem"><button class="serBtnItm">Instalation Service</button></li>
+                                <li class="serviceItem"><button class="serBtnItm">Instalation Service</button></li>
+                                <li class="serviceItem"><button class="serBtnItm">Instalation Service</button></li>
+                                <li class="serviceItem"><button class="serBtnItm">Instalation Service</button></li>
+                                <li class="serviceItem"><button class="serBtnItm">Instalation Service</button></li>
+                                <li class="serviceItem"><button class="serBtnItm">Instalation Service</button></li>
+                              </ul>
+                              <input type="text" placeholder="+Otra no enlistada" id="otherServ">
+                          </div>
+                          <div class="col-md-3 serviceArea">
+                            <label for="" id="techLab">Technologías</label>
+                            <p id="techHelB" class="help-block">Selecciona una o varias instalaciones con las que cuenta tu espacio haciendo click a continuación.</p>
+                              <ul class="servicesList">
+                                <li class="serviceItem"><button class="serBtnItm">Technology Service</button></li>
+                                <li class="serviceItem"><button class="serBtnItm">Technology Service</button></li>
+                                <li class="serviceItem"><button class="serBtnItm">Technology Service</button></li>
+                                <li class="serviceItem"><button class="serBtnItm">Technology Service</button></li>
+                                <li class="serviceItem"><button class="serBtnItm">Technology Service</button></li>
+                                <li class="serviceItem"><button class="serBtnItm">Technology Service</button></li>
+                                <li class="serviceItem"><button class="serBtnItm">Technology Service</button></li>
+                                <li class="serviceItem"><button class="serBtnItm">Technology Service</button></li>
+                              </ul>
+                              <input type="text" placeholder="+Otra no enlistada" id="otherServ">
+                          </div>
+                          <div class="col-md-3 serviceArea">
+                            <label for="" id="inSerLab">Servicios Incluidos</label>
+                            <p id="inSerHelB" class="help-block">Selecciona una o varias instalaciones con las que cuenta tu espacio haciendo click a continuación.</p>
+                              <ul class="servicesList">
+                                <li class="serviceItem"><button class="serBtnItm">Included Service</button></li>
+                                <li class="serviceItem"><button class="serBtnItm">Included Service</button></li>
+                                <li class="serviceItem"><button class="serBtnItm">Included Service</button></li>
+                                <li class="serviceItem"><button class="serBtnItm">Included Service</button></li>
+                                <li class="serviceItem"><button class="serBtnItm">Included Service</button></li>
+                                <li class="serviceItem"><button class="serBtnItm">Included Service</button></li>
+                                <li class="serviceItem"><button class="serBtnItm">Included Service</button></li>
+                                <li class="serviceItem"><button class="serBtnItm">Included Service</button></li>
+                              </ul>
+                              <input type="text" placeholder="+Otra no enlistada" id="otherServ">
+                          </div>
+                        </div>
+
+                        <div id="extraServicesCost" class="row-fluid">
+                          <div id="exSerDiv" class="col-xs-12 col-md-11 col-md-offset-1">
+                            <label for="" id="exSerCstLab">Servicios Adicionales con Costo Extra</label>
+                            <p class="hel-block" id="exSerCstHB">¿Ofreces servicios no incluidos en el costo de la renta del espacio?</p>
+                            <p class="hel-block" id="exSerCstHB">Puedes incluir desde un rico cafe espresso,  servicio de impresión, una variedad de menús, valet parking, o cualquier servicio relevante para tu espacio</p>
+                            <div id="inExSerBtn" class="col-xs-12">
+                              <button class="exSerBtn">Sí</button>
+                              <button class="exSerBtn">No</button>
+                            </div>
+                          </div>
+
+                            <!-- when somebody enters something new -->
+                          <div id="inExtServSpace" class="row-fluid">
+                            <div id="inExtServ" class="col-xs-12 col-md-10 col-md-offset-1">
+                              <div id="inputsExServ" class="row">
+                                    <div id="exSrvInAllCnt" class="col-xs-12">
+                                      <div id="exSrvInSetterCnt" class="row">
+                                          <div class="col-xs-12">
+                                              <label id="exSerInLab">Agrega cuantos servicios con costo extra desees ofrecer a tu invitado. Pop Space no te cobra una comision por estos servicio, solo por la renta del espacio.</label>
+                                          </div>
+                                      </div> 
+                                      <div id="exSrvInSetCntInputs" class="row-fluid">
+                                          <div class="col-xs-12 col-md-2 inputsDivs">
+                                            <input type="text" id="exServDet" placeholder="Nombre del servicio">
+                                          </div>
+                                          <div class="col-xs-12 col-md-2 inputsDivs">
+                                                <input type="number" id="exServDet" placeholder="Costo Por Unidad">
+                                          </div>
+                                          <div class="col-xs-12 col-md-2 inputsDivs">
+                                                <input type="number" id="exServDet" placeholder="Número Mínimo de Servicios">
+                                          </div>
+                                          <div class="col-xs-12 col-md-2 inputsDivs">
+                                                <input type="number" id="exServDet" placeholder="Número Máximo de Servicios">
+                                          </div>
+                                          <div class="col-xs-12 col-md-2 inputsDivs">
+                                              <div class="fileInputCont">
+                                                <p class="fileBtnTxt">+Adjuntar Archivo</p>
+                                                <input type="file" class="fileExSerCst" id="exServDet">
+                                              </div>
+                                          </div>
+                                          <div id="addExServBtn" class="col-xs-12 col-md-2">
+                                              <button class="addSerCstEx">Agregar</button>
+                                          </div>
+                                      </div>
+                                    </div>  
+                              </div>
+
+                              <div id="exSrvInTag" class="row">
+                                  <div class="col-xs-3 fieldExSrvInCnt">
+                                      <span class="tagLabelExSrv">Nombre<br></span>
+                                      <span id="exSrvInName" class="srvDetField">Impresión a Color</span>
+                                  </div>
+                                  <div class="col-xs-3 col-sm-2 fieldExSrvInCnt">
+                                      <span class="tagLabelExSrv">Precio<br></span>
+                                      <span id="exSrvInCst" class="srvDetField">Está muy caro</span>
+                                  </div>
+                                  <div class="col-xs-2 col-sm-2 fieldExSrvInCnt noBef600Inp">
+                                      <span id="exSrvInMin" class="srvDetField">1</span>
+                                  </div>
+                                  <div class="col-xs-2 col-sm-2 fieldExSrvInCnt noBef600Inp">
+                                      <span id="exSrvInMax" class="srvDetField">100</span>
+                                  </div>
+                                  <div id="exSrvInFiNameCnt" class="col-xs-3 col-sm-2 fieldExSrvInCnt">
+                                      <span class="tagLabelExSrv">Archivos<br></span>
+                                      <span id="exSrvInFiName" class="srvDetField">epson.jpg</span>
+                                  </div>
+                                  <div class="col-xs-3 col-sm-2 fieldExSrvInCnt fieldExSrvInBtn">     <button id="cnlExServBtn">
+                                            <span class="delBtnExSrvTag">Eliminar</span>
+                                       </button>
+                                  </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <!-- botones inferiores -->
+                        <div class="row-fluid">
+                          <div class="col-xs-12">
+                            <ul class="pager wizard  downButtons">
+                                <li class="previous">
+                                  <a href="#">Previous</a>
+                                </li>
+                                
+                                <li class="next">
+                                  <a href="#">Next</a>
+                                </li>
+                            </ul> 
+                          </div>
+                        </div>                     
+                    </div>
+
+
+                    <div class="tab-pane" id="tab5">
+                        <div class="row">
+                          <div class="col-xs-12 col-md-6 areaTextInf">
+                            <label for="" class="fifthPanHedLab">Descripción del Espacio</label>
+                            <p class="help-block fPanHT">
+                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur doloribus, dicta odit iusto 
+                            </p>
+                            <textarea class="infoAbSpace" placeholder="Descripción"></textarea>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-12 col-md-6 areaTextInf">
+                            <label for="" class="fifthPanHedLab">Reglas del Espacio</label>
+                            <p class="help-block fPanHT">dicta tempora earum excepturi aut hic vel, inventore neque vero odio tempore ad eum illo cum sapiente illum veniam, nemo aliquid!</p>
+                            <textarea class="infoAbSpace" placeholder="Escribe la información"></textarea>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-12 col-md-6 areaTextInf">
+                            <label for="" class="fifthPanHedLab">Información Adicional para el Acceso</label>
+                            <p class="help-block fPanHT">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi minus aperiam accusantium facere deleniti delectus, corporis dolores lehenderit eaque nesciunt dignissimos.</p>
+                            <textarea class="infoAbSpace" placeholder="Escribe la información"></textarea>
+                          </div>
+                        </div>
+                        <!-- Políticas de cancelación -->
+                        <!-- <div class="row">
+                          <div class="col-xs-12 cncPolDiv">
+                            <label for="" class="cncPol">Políticas de cancelación de este espacio</label>
+                            <div class="row">
+                              <div class="col-xs-12">
+                                <p class="cncHeB help-block"><input class="polCncChBx" type="checkbox"> Acepto las <a class="polCncChAnch" href="#">Políticas de cancelación</a></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div> -->
+                        <!-- botones inferiores -->
+                        <div class="row-fluid">
+                          <div class="col-xs-12">
+                            <ul class="pager wizard  downButtons">
+                                <li class="previous">
+                                  <a href="#">Previous</a>
+                                </li>
+                                
+                                <li class="next">
+                                  <a href="#">Next</a>
+                                </li>
+                            </ul> 
+                          </div>
+                        </div>                     
+                    </div>
+
+
+
+                    <div class="tab-pane" id="tab6">
+ 
+                        <div class="page-container">
+                          <div class="main-content">
+                            <div class="gallery-env">
+                            
+                            <!--Edit Album Button -->
+                              <!-- <div class="row">
+                                <div class="col-xs-12">
+                                  <h3 id="edAlCnt">
+                                    <a href="#" onclick="jQuery('#album-cover-options').modal('show');" class="phGallEd-Al">
+                                      Edit Album
+                                    </a>
+                                  </h3>                                  
+                                </div>
+                              </div> -->
+
+                            <!--Image Filter -->
+                              <!-- <div class="row-fluid">
+                                <div class="col-xs-12 col-md-6 col-md-offset-6 image-categories">
+                                    <span>Filter Images:</span>
+                                    <a href="#" class="active" data-filter="all">Show All</a> /
+                                    <a href="#" data-filter="1d">Taken today</a> /
+                                    <a href="#" data-filter="3d">Taken three days ago</a> /
+                                    <a href="#" data-filter="1w">Taken a week ago</a>
+                                  </div>
+                              </div> -->
+                            
+
+                            <!-- Images Gallery -->
+                            <div class="gallerieArea row-fluid">
+                            
+                              <div class="col-sm-2 col-xs-6" data-tag="1d">
+                                
+                                <article class="image-thumb">
+                                  
+                                  <a href="#" class="image">
+                                    <img src="{% static 'popspace_web/img/neon-img/album-image-1.jpg' %}" />
+                                  </a>
+                                  
+                                  <div class="image-options">
+                                    <a href="#" class="edit"><i class="entypo-pencil"></i></a>
+                                    <a href="#" class="delete"><i class="entypo-cancel"></i></a>
+                                  </div>
+                                  
+                                </article>
+                              </div>
+                            
+                              <div class="col-sm-2 col-xs-6" data-tag="3d">
+                                
+                                <article class="image-thumb">
+                                  
+                                  <a href="#" class="image">
+                                    <img src="{% static 'popspace_web/img/neon-img/album-image-1.jpg' %}" />
+                                  </a>
+                                  
+                                  <div class="image-options">
+                                    <a href="#" class="edit"><i class="entypo-pencil"></i></a>
+                                    <a href="#" class="delete"><i class="entypo-cancel"></i></a>
+                                  </div>
+                                  
+                                </article>
+                              </div>
+                            
+                              <div class="col-sm-2 col-xs-6" data-tag="3d">
+                                
+                                <article class="image-thumb">
+                                  
+                                  <a href="#" class="image">
+                                    <img src="{% static 'popspace_web/img/neon-img/album-image-1.jpg' %}" />
+                                  </a>
+                                  
+                                  <div class="image-options">
+                                    <a href="#" class="edit"><i class="entypo-pencil"></i></a>
+                                    <a href="#" class="delete"><i class="entypo-cancel"></i></a>
+                                  </div>
+                                  
+                                </article>
+                              </div>
+                            
+                              <div class="col-sm-2 col-xs-6" data-tag="1d">
+                                
+                                <article class="image-thumb">
+                                  
+                                  <a href="#" class="image">
+                                    <img src="{% static 'popspace_web/img/neon-img/album-image-1.jpg' %}" />
+                                  </a>
+                                  
+                                  <div class="image-options">
+                                    <a href="#" class="edit"><i class="entypo-pencil"></i></a>
+                                    <a href="#" class="delete"><i class="entypo-cancel"></i></a>
+                                  </div>
+                                  
+                                </article>
+                              </div>
+                            
+                              <div class="col-sm-2 col-xs-6" data-tag="1d">
+                                
+                                <article class="image-thumb">
+                                  
+                                  <a href="#" class="image">
+                                    <img src="{% static 'popspace_web/img/neon-img/album-image-1.jpg' %}" />
+                                  </a>
+                                  
+                                  <div class="image-options">
+                                    <a href="#" class="edit"><i class="entypo-pencil"></i></a>
+                                    <a href="#" class="delete"><i class="entypo-cancel"></i></a>
+                                  </div>
+                                  
+                                </article>
+                              </div>
+                            
+                              <div class="col-sm-2 col-xs-6" data-tag="3d">
+                                
+                                <article class="image-thumb">
+                                  
+                                  <a href="#" class="image">
+                                    <img src="{% static 'popspace_web/img/neon-img/album-image-1.jpg' %}" />
+                                  </a>
+                                  
+                                  <div class="image-options">
+                                    <a href="#" class="edit"><i class="entypo-pencil"></i></a>
+                                    <a href="#" class="delete"><i class="entypo-cancel"></i></a>
+                                  </div>
+                                  
+                                </article>
+                              </div>
+                            
+                              <div class="col-sm-2 col-xs-6" data-tag="1w">
+                                
+                                <article class="image-thumb">
+                                  
+                                  <a href="#" class="image">
+                                    <img src="{% static 'popspace_web/img/neon-img/album-image-1.jpg' %}" />
+                                  </a>
+                                  
+                                  <div class="image-options">
+                                    <a href="#" class="edit"><i class="entypo-pencil"></i></a>
+                                    <a href="#" class="delete"><i class="entypo-cancel"></i></a>
+                                  </div>
+                                  
+                                </article>
+                              </div>
+                            
+                              <div class="col-sm-2 col-xs-6" data-tag="1d">
+                                
+                                <article class="image-thumb">
+                                  
+                                  <a href="#" class="image">
+                                    <img src="{% static 'popspace_web/img/neon-img/album-image-1.jpg' %}" />
+                                  </a>
+                                  
+                                  <div class="image-options">
+                                    <a href="#" class="edit"><i class="entypo-pencil"></i></a>
+                                    <a href="#" class="delete"><i class="entypo-cancel"></i></a>
+                                  </div>
+                                  
+                                </article>
+                              </div>
+                            
+                              <div class="col-sm-2 col-xs-6" data-tag="1w">
+                                
+                                <article class="image-thumb">
+                                  
+                                  <a href="#" class="image">
+                                    <img src="{% static 'popspace_web/img/neon-img/album-image-1.jpg' %}" />
+                                  </a>
+                                  
+                                  <div class="image-options">
+                                    <a href="#" class="edit"><i class="entypo-pencil"></i></a>
+                                    <a href="#" class="delete"><i class="entypo-cancel"></i></a>
+                                  </div>
+                                  
+                                </article>
+                              </div>
+                            
+                              <div class="col-sm-2 col-xs-6" data-tag="1w">
+                                
+                                <article class="image-thumb">
+                                  
+                                  <a href="#" class="image">
+                                    <img src="{% static 'popspace_web/img/neon-img/album-image-1.jpg' %}" />
+                                  </a>
+                                  
+                                  <div class="image-options">
+                                    <a href="#" class="edit"><i class="entypo-pencil"></i></a>
+                                    <a href="#" class="delete"><i class="entypo-cancel"></i></a>
+                                  </div>
+                                  
+                                </article>
+                              </div>
+                            
+                              <div class="col-sm-2 col-xs-6" data-tag="3d">
+                                
+                                <article class="image-thumb">
+                                  
+                                  <a href="#" class="image">
+                                    <img src="{% static 'popspace_web/img/neon-img/album-image-1.jpg' %}" />
+                                  </a>
+                                  
+                                  <div class="image-options">
+                                    <a href="#" class="edit"><i class="entypo-pencil"></i></a>
+                                    <a href="#" class="delete"><i class="entypo-cancel"></i></a>
+                                  </div>
+                                  
+                                </article>
+                              </div>
+                            
+                              <div class="col-sm-2 col-xs-6" data-tag="1w">
+                                
+                                <article class="image-thumb">
+                                  
+                                  <a href="#" class="image">
+                                    <img src="{% static 'popspace_web/img/neon-img/album-image-1.jpg' %}" />
+                                  </a>
+                                  
+                                  <div class="image-options">
+                                    <a href="#" class="edit"><i class="entypo-pencil"></i></a>
+                                    <a href="#" class="delete"><i class="entypo-cancel"></i></a>
+                                  </div>
+                                  
+                                </article>
+                              </div>
+                            
+                              <div class="col-sm-2 col-xs-6" data-tag="1d">
+                                
+                                <article class="image-thumb">
+                                  
+                                  <a href="#" class="image">
+                                    <img src="{% static 'popspace_web/img/neon-img/album-image-1.jpg' %}" />
+                                  </a>
+                                  
+                                  <div class="image-options">
+                                    <a href="#" class="edit"><i class="entypo-pencil"></i></a>
+                                    <a href="#" class="delete"><i class="entypo-cancel"></i></a>
+                                  </div>
+                                  
+                                </article>
+                              </div>
+                            
+                              <div class="col-sm-2 col-xs-6" data-tag="1w">
+                                
+                                <article class="image-thumb">
+                                  
+                                  <a href="#" class="image">
+                                    <img src="{% static 'popspace_web/img/neon-img/album-image-1.jpg' %}" />
+                                  </a>
+                                  
+                                  <div class="image-options">
+                                    <a href="#" class="edit"><i class="entypo-pencil"></i></a>
+                                    <a href="#" class="delete"><i class="entypo-cancel"></i></a>
+                                  </div>
+                                  
+                                </article>
+                              </div>
+                            
+                              <div class="col-sm-2 col-xs-6" data-tag="1d">
+                                
+                                <article class="image-thumb">
+                                  
+                                  <a href="#" class="image">
+                                    <img src="{% static 'popspace_web/img/neon-img/album-image-1.jpg' %}" />
+                                  </a>
+                                  
+                                  <div class="image-options">
+                                    <a href="#" class="edit"><i class="entypo-pencil"></i></a>
+                                    <a href="#" class="delete"><i class="entypo-cancel"></i></a>
+                                  </div>
+                                  
+                                </article>
+                              </div>
+                            
+                              <div class="col-sm-2 col-xs-6" data-tag="3d">
+                                
+                                <article class="image-thumb">
+                                  
+                                  <a href="#" class="image">
+                                    <img src="{% static 'popspace_web/img/neon-img/album-image-1.jpg' %}" />
+                                  </a>
+                                  
+                                  <div class="image-options">
+                                    <a href="#" class="edit"><i class="entypo-pencil"></i></a>
+                                    <a href="#" class="delete"><i class="entypo-cancel"></i></a>
+                                  </div>
+                                  
+                                </article>
+                              </div>
+                            
+                              <div class="col-sm-2 col-xs-6" data-tag="1w">
+                                
+                                <article class="image-thumb">
+                                  
+                                  <a href="#" class="image">
+                                    <img src="{% static 'popspace_web/img/neon-img/album-image-1.jpg' %}" />
+                                  </a>
+                                  
+                                  <div class="image-options">
+                                    <a href="#" class="edit"><i class="entypo-pencil"></i></a>
+                                    <a href="#" class="delete"><i class="entypo-cancel"></i></a>
+                                  </div>
+                                  
+                                </article>
+                              </div>
+                            
+                              <div class="col-sm-2 col-xs-6" data-tag="1d">
+                                
+                                <article class="image-thumb">
+                                  
+                                  <a href="#" class="image">
+                                    <img src="{% static 'popspace_web/img/neon-img/album-image-1.jpg' %}" />
+                                  </a>
+                                  
+                                  <div class="image-options">
+                                    <a href="#" class="edit"><i class="entypo-pencil"></i></a>
+                                    <a href="#" class="delete"><i class="entypo-cancel"></i></a>
+                                  </div>
+                                  
+                                </article>
+                              </div> 
+                            </div>
+                            
+                            </div>
+
+                            <!-- Dropdown Area Gallery -->
+                            <div action="#.php" class="dropzone dz-min DropArea" id="dropzone_example">
+                              <div class="fallback">
+                                <input name="file" type="file" multiple />
+                              </div>
+                            </div>
+                            
+                            <div id="dze_info" class="hidden">
+                              
+                              <br />
+                              <div class="panel panel-default">
+                                <div class="panel-heading">
+                                  <div class="panel-title">Dropzone Uploaded Images Info</div>
+                                </div>
+                                
+                                <table class="table table-bordered">
+                                  <thead>
+                                    <tr>
+                                      <th width="40%">File name</th>
+                                      <th width="15%">Size</th>
+                                      <th width="15%">Type</th>
+                                      <th>Status</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                  </tbody>
+                                  <tfoot>
+                                    <tr>
+                                      <td colspan="4"></td>
+                                    </tr>
+                                  </tfoot>
+                                </table>
+                              </div>
+                            </div>
+
+                            <!-- success -->
+
+                            <!-- <div class="successFrm">
+                              <div class="modalSuccess">
+                              <span class="endXBtn glyphicon glyphicon-remove"></span>
+                                <div class="modalScsslogo">
+                                  <img src="" alt="" class="logo">
+                                </div>
+                                <h1 class="congrats">Felicidades</h1>
+                                <p class="successText">
+                                  Tu espacio ha sido registrado con éxito. La información será evaluada por el equipo de Pop Space y en menos de 48 horas recibirás una notificación sobre su estatus.
+                                </p>
+                                <hr>
+                                <div class="acceptsMdl"><button class="aceptingNwSpaceBtn">Aceptar</button></div>
+                              </div>
+                            </div>
+                          </div> -->
+                        </div>
+
+                        <!-- Album Cover Settings Modal -->
+                        <div class="modal fade custom-width" id="album-cover-options">
+                          <div class="modal-dialog" style="width: 65%;">
+                            <div class="modal-content">
+                              
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title">Edit: <strong>Album Title</strong></h4>
+                              </div>
+                              
+                              <div class="modal-body">
+                                
+                                <div class="row">
+                                  <div class="col-sm-6">
+                                            
+                                    <div class="row">
+                                      <div class="col-md-12">
+                                        
+                                        <h4 class="margin-top-none">Crop Image</h4>
+                                        
+                                        <div class="croppable-image">
+                                          <img src="{% static 'popspace_web/img/neon-img/sample-crop.jpg' %}" class="img-responsive" />
+                                        </div>
+                                        
+                                      </div>
+                                    </div>
+                                    
+                                  </div>
+                                  
+                                  <div class="col-sm-6">
+                                  
+                                    <div class="row">
+                                      <div class="col-md-12">
+                                        
+                                        <div class="form-group">
+                                          <label for="field-1" class="control-label">Title</label>
+                                          
+                                          <input type="text" class="form-control" id="field-1" placeholder="Enter album title">
+                                        </div>  
+                                        
+                                      </div>
+                                    </div>
+                                  
+                                    <div class="row">
+                                      <div class="col-md-12">
+                                        
+                                        <div class="form-group">
+                                          <label for="field-1" class="control-label">Tags</label>
+                                          
+                                          <input type="text" class="form-control" id="field-3" placeholder="Tags">
+                                        </div>  
+                                        
+                                      </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                      <div class="col-md-12">
+                                        
+                                        <div class="form-group">
+                                          <label for="field-1" class="control-label">Description</label>
+                                          
+                                          <textarea class="form-control autogrow" id="field-2" placeholder="Enter album description" style="min-height: 120px;"></textarea>
+                                        </div>  
+                                        
+                                      </div>
+                                    </div>
+                                    
+                                  </div>
+                                </div>
+                                
+                                
+                              </div>
+                              
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-success btn-icon">
+                                  <i class="entypo-check"></i>
+                                  Apply Changes
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <!-- Album Image Settings Modal -->
+                        <div class="modal fade" id="album-image-options">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              
+                              <!-- <div class="gallery-image-edit-env">
+                                <img src="{% static 'popspace_web/img/neon-img/sample-crop-1.png' %}" class="img-responsive" />
+                                
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                              </div>
+                               -->
+                              <div class="modal-body">
+                              
+                                  
+                                    <!-- <div class="row">
+                                      
+                                    </div>
+                                    
+                                    <div class="row">
+                                      
+                                    </div> -->
+                                    <h3 class="editHead">Editar Foto</h3>
+                                  <div class="imgModalEdit"></div>
+                                
+                              </div>
+                              
+                              <div class="modal-footer">
+                                <div class="chBoxCont">
+                                    <p><input class="modalEditChBx" type="checkbox">Hacer foto de portada</p>
+                                    <p><input class="modalEditChBx" type="checkbox">Rotar imagen</p>
+                                </div>
+                                <div class="btnsCont">
+                                  <button type="button" class="modalEditFooterbtns">Cancelar</button>
+                                  <button type="button" class="modalEditFooterbtns">Apply Changes</button>
+                                </div>  
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- botones inferiores -->
+                        <div class="row-fluid">
+                          <div class="col-xs-12">
+                            <ul class="pager wizard downButtons">
+                                <li class="previous">
+                                  <a href="#">Previous</a>
+                                </li>
+                                <li class="next">
+                                  <input id="subNewSpace" type="submit" value="Publish">
+                                </li>
+                            </ul>
+                          </div>
+                        </div>                      
+                    </div>                              
+                  </div>
+              </form>
+        </div>
+      </div>
+    </div>          
+  </main>

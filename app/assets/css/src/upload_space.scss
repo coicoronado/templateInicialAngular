@@ -1,0 +1,1654 @@
+// File with styles for the new version of popSpace
+
+@import 'variables';
+
+.container {
+  max-width: 100vw;
+  font-family: Post Grotesk;
+}
+
+.host__section {
+  margin-top: 60px;
+}
+
+/*.help-block{
+  text-align: justify !important;
+}*/
+
+a {
+  &:link, &:visited, &:hover {
+    text-decoration: none !important;
+  }
+}
+
+input {
+  outline: none;
+}
+
+select {
+  outline: none;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type=number] {
+  &::-webkit-inner-spin-button, &::-webkit-outer-spin-button, &::-moz-inner-spin-button, &::-moz-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
+}
+
+#tab1 a:hover, #tab2 a:hover, #tab3 a:hover, #tab4 a:hover, #tab5 a:hover, #tab6 a:hover {
+  text-decoration: none !important;
+}
+
+@media (min-width: 320px) {
+  /*/////////////////////////////////////////
+  ///////////////////////////////////
+  Service's style's*/
+  #exSrvInTag {
+    height: 66px;
+  }
+}
+
+/*/////////////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+plantilla descripción del espacio*/
+
+.upload-title {
+  color: #2B3A42;
+  font-weight: lighter;
+  position: absolute;
+  top: 75px;
+  left: 10px;
+  font-size: 36px;
+  font-family: Post Grotesk;
+}
+
+.form-wizard {
+  margin-top: 165px;
+}
+
+.steps-progress {
+  background-color: #9BCFD0 !important;
+}
+
+.progress-indicator {
+  background-color: #139699 !important;
+}
+
+.form-wizard > ul > li {
+  a span {
+    background-color: #9BCFD0;
+    color: #fff;
+  }
+  &.completed a span {
+    background-color: #139699;
+    box-shadow: 0px 0px 0px 5px #139699;
+  }
+  a, &.completed a, &.active a, &.current a {
+    color: #4A4A4A;
+  }
+  &.active a span, &.current a span {
+    box-shadow: 0px 0px 0px 5px #9BCFD0;
+    background-color: #fff;
+  }
+}
+
+.uploadspace__tabs {
+  padding: 0px;
+}
+
+div#tabContent {
+  display: block;
+  max-width: 100vw;
+  margin: 0px;
+  padding: 40px;
+}
+
+#infoDescripts {
+  margin-bottom: 40px;
+}
+
+#spaceName label, #spaceCapacity label, #spaceLabels label {
+  font-size: 16px;
+  text-align: left;
+  height: 50px;
+}
+
+#spaceName .help-block, #spaceLabels .help-block, #spaceCapacity .help-block {
+  font-size: 12px;
+  text-align: left;
+}
+
+.textAreaFirst, .form-horizontal .form-group {
+  width: 100%;
+  margin-right: 5px;
+}
+
+.bootstrap-tagsinput {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+  top: 4%;
+  max-height: 72px !important;
+  overflow: scroll;
+  border: hidden !important;
+  height: 72px !important;
+  input {
+    width: 100% !important;
+    border: hidden !important;
+  }
+}
+
+.label-info {
+  background: #139699 !important;
+}
+
+.bootstrap-tagsinput .tag {
+  margin-bottom: 3px;
+}
+
+.textAreaFirstChild, textarea.form-control {
+  border-style: hidden;
+  position: relative;
+  top: 10px;
+}
+
+/*#form-el-3{
+  top: -1px;
+}*/
+
+#spaceType {
+  padding: 0px;
+}
+
+.eventsType {
+  position: relative;
+  width: 48%;
+  padding-left: 0px;
+  padding-right: 0px;
+  left: -14px;
+  margin-right: 9px;
+  &:nth-of-type(2) {
+    position: relative;
+    width: 48%;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.spaceTyeBtn {
+  background-color: #FFF !important;
+  color: #4A4A4A !important;
+  text-align: left;
+  padding-left: 15px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  &:hover {
+    background-color: #FFF !important;
+    color: #4A4A4A !important;
+    text-align: left;
+    padding-left: 14px;
+    border-radius: 3px;
+    border: solid 1px #9BCFD0;
+  }
+}
+
+.btn-head {
+  color: #4A4A4A !important;
+  height: 168px;
+  text-align: center;
+  font-size: 240%;
+  padding-left: 0px;
+  &:hover {
+    color: #4A4A4A;
+    text-align: center;
+    padding-left: 0px;
+  }
+}
+
+.spaceTyeBtn.active, .btn-head.active {
+  background-color: #9BCFD0;
+  color: #4A4A4A;
+}
+
+#firstNextBtn {
+  float: none;
+  width: 331px;
+  height: 47px;
+  font-family: Post Grotesk;
+  border-radius: 3px;
+  background-color: #2B3A42 !important;
+  font-size: 20px;
+  color: white;
+}
+
+.downButtons {
+  position: relative;
+  top: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nextButton {
+  float: none;
+  width: 331px;
+  height: 47px;
+  font-family: Post Grotesk;
+  border-radius: 3px;
+  background-color: #2B3A42 !important;
+  font-size: 20px;
+  color: white;
+}
+
+.pager {
+  .next > {
+    a, span {
+      float: none;
+      width: 331px;
+      height: 47px;
+      font-family: Post Grotesk;
+      border-radius: 3px;
+      background-color: #2B3A42 !important;
+      font-size: 20px;
+      color: white;
+    }
+  }
+  .previous > {
+    a, span {
+      float: none;
+      width: 331px;
+      height: 47px;
+      font-family: Post Grotesk;
+      border-radius: 3px;
+      background-color: #2B3A42 !important;
+      font-size: 20px;
+      color: white;
+    }
+  }
+}
+
+/*///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+plantilla ubicación del espacio*/
+
+#locationFormContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+#locMap {
+  padding: 0;
+  margin-top: 40px;
+}
+
+#locLabel {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#locHelpB {
+  font-size: 14px;
+  margin: 20px 0;
+}
+
+#locInStr, #locInCol, #locInCoun {
+  height: 35px;
+  border: hidden;
+  margin: 6px 0;
+}
+
+#locInAdN > input, #locInAIN > input {
+  height: 35px;
+  border: hidden;
+}
+
+#locInAdN {
+  margin: 6px 0;
+  padding-right: 2px;
+}
+
+#locInAIN {
+  margin: 6px 0;
+  padding-left: 2px;
+}
+
+#locInZC {
+  height: 35px;
+  border: hidden;
+}
+
+#locInCity {
+  height: 35px;
+  border: hidden;
+  margin: 6px 0;
+}
+
+#ParkingDiv {
+  padding-left: 0px;
+  text-align: left;
+  margin-top: 40px;
+  margin-left: -15px;
+}
+
+#locLabPark {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#locHelBPark {
+  font-size: 14px;
+}
+
+#defineParking {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#locSelYN {
+  background: #fff;
+  min-width: 170px;
+  width: 40%;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  height: 35px;
+  margin: 6px 4px;
+}
+
+.selectboxit-container {
+  min-width: 170px;
+  /*width: 40%;*/
+  padding: 5px;
+  font-size: 16px;
+  /*    margin: 6px 4px;*/
+  position: relative;
+  top: 11% !important;
+}
+
+.selectboxit {
+  height: 37px !important;
+}
+
+.selectboxit-text {
+  position: absolute;
+}
+
+.selectboxit-arrow-container {
+  height: 100% !important;
+}
+
+.selectboxit-list {
+  min-width: 170px !important;
+}
+
+.selectboxit-options {
+  width: 95% !important;
+}
+
+/*.selectboxit-option-anchor:hover{
+  background: #EAEAEA !important;
+}*/
+
+.selectboxit-option-anchor {
+  display: flex !important;
+  flex-direction: row-reverse !important;
+  position: relative;
+  left: 10%;
+}
+
+li.selectboxit-focus {
+  background: #f3f3f3;
+  .selectboxit-option-anchor {
+    background: transparent !important;
+  }
+}
+
+#carsNumber {
+  height: 35px;
+  border: hidden;
+  margin: 6px 4px;
+  max-width: 182px;
+  /*width: 40%;*/
+}
+
+#spaceLocation {
+  display: block;
+  text-align: left;
+}
+
+#mapDiv {
+  padding-left: 0;
+  text-align: left;
+}
+
+#mapLabPark {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#mapHelBPark {
+  font-size: 14px;
+  margin: 20px 0;
+}
+
+#map {
+  height: 419px;
+  max-width: 500px;
+  width: 100%;
+  background: #D8EDE7;
+  font-size: 90px;
+  color: #353A38;
+  text-align: center;
+  padding-top: 150px;
+}
+
+/*Availabilty styles*/
+/*//////////////////////////////
+//////////////////////////////
+//////////////////////////////
+//////////////////////////////
+//////////////////////////////
+*/
+
+#weekSel {
+  padding-left: 0px;
+}
+
+#weekSelLabel, #hrsDefLabs, #dayHrsLabel {
+  font-weight: bold;
+  font-size: 16px;
+  text-align: left;
+}
+
+#hrsDefLabs {
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+#weekSelHelB, #dayHrsHelB {
+  font-size: 14px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+#timeListsCont, .hrsSelect {
+  background-color: #dfeeef;
+  padding: 15px;
+}
+
+.days, .dayTimeDef {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.daysItm {
+  width: 40%;
+}
+
+.dayTimeDef {
+  margin-bottom: 0px;
+}
+
+.weekDay {
+  background-color: white !important;
+  border: solid 1px white;
+  color: black;
+  margin-bottom: 8px;
+  border-radius: 3px !important;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  &:hover {
+    border: solid 1px #9BCFD0;
+    color: black !important;
+    background-color: #FFF !important;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  &.active {
+    background-color: #ABDDE4;
+  }
+}
+
+.hrsDefContain {
+  display: block;
+}
+
+#from, #until, #dayPrice {
+  height: 47px;
+  border: hidden;
+  width: 100%;
+  position: relative;
+  padding-left: 10%;
+}
+
+#from, #until {
+  background: transparent;
+}
+
+/*#from:after, #until:after{
+  content: "\f0dc";
+  font-family: FontAwesome;
+  color: #000;
+  padding: 2px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  right: 0;
+  z-index: 1;
+  width: 10%;
+  height: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  line-height: 10%;
+}*/
+
+#addSpacesTime {
+  height: 47px;
+  width: 95%;
+  margin-top: 30px;
+  background-color: #139699 !important;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  font-family: Post Grotesk;
+}
+
+#minDayHrs {
+  position: relative;
+  top: 32px;
+}
+
+.hrsSelect {
+  padding: 15px;
+  height: 145px;
+  display: flex;
+  justify-content: center;
+}
+
+#timeHrs {
+  background: transparent;
+  width: 248px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 0;
+  border-radius: 0;
+  height: 34px;
+  -webkit-appearance: none;
+  height: 35px;
+  margin: 6px 4px;
+}
+
+/*  .caret-cont{
+  text-align: right;
+  background: white;
+  height: 47px;
+  width: 100%;
+}*/
+
+.mySelect {
+  border: 1px solid #EAE8E7;
+  background: white;
+  width: 100%;
+  height: 48px;
+  z-index: 10;
+}
+
+.mySelectLast {
+  border: 1px solid #EAE8E7;
+  background: white;
+  width: 100%;
+  height: 48px;
+  z-index: 8;
+}
+
+.theBox {
+  display: flex;
+  height: 100%;
+  font-size: 18px;
+}
+
+span.arrow {
+  width: 20%;
+  padding-top: 4px;
+  text-align: center;
+  color: #b3b2b2;
+  border-left: solid 1px #e0e0e0;
+  cursor: pointer;
+}
+
+.firstItm, .firstItm2, .firstItm3 {
+  text-align: left;
+  padding: 10px;
+  width: 80%;
+  margin: 0;
+  color: #949494;
+  padding-top: 15px;
+  font-size: 12px;
+}
+
+ul {
+  &#fakeSelect {
+    width: 100%;
+    /*height: 0%;*/
+    display: none;
+    padding-left: 0;
+    margin: 0;
+    border: solid 1px #e0e0e0;
+    position: relative;
+    left: -1px;
+    z-index: 10;
+    background: white;
+    text-align: left;
+  }
+  &.fakeSel3 {
+    z-index: 9;
+  }
+}
+
+.itm {
+  list-style: none;
+  padding-left: 10px;
+  color: #777272;
+  background: white;
+}
+
+.itmBox {
+  margin: 5px 0;
+}
+
+.itm:hover, span.arrow:hover, .firstItm:hover, .theBox:hover {
+  background: #f3f3f3;
+  cursor: pointer;
+}
+
+.bottomAvailCaret-cont {
+  width: 236px;
+  text-align: right;
+  position: relative;
+  background: white;
+  padding: 0px;
+  height: 40px;
+}
+
+.BottCaret-Down {
+  position: relative;
+  font-size: 19px;
+  right: 1%;
+  top: 25%;
+  color: #979797;
+}
+
+.BottCaret-DownBig {
+  position: relative;
+  font-size: 23px;
+  right: 3%;
+  top: 20%;
+  color: #979797;
+}
+
+#authArea {
+  margin-top: 30px;
+}
+
+#authTicket {
+  margin-top: 60px;
+  padding-right: 30px;
+}
+
+.authDatesLab {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.date-tag {
+  background-color: white !important;
+  height: 53px;
+  overflow: hidden;
+}
+
+.authDetail {
+  padding: 16px 2px;
+  color: #3E4357;
+  font-size: 11px;
+}
+
+.authDay {
+  padding-left: 10px;
+  text-align: left;
+}
+
+.authPPHr {
+  text-align: center;
+}
+
+.timeRange {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.cancelDiv {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0px;
+}
+
+.cancel {
+  text-align: center;
+  background-color: #F80853;
+  color: white;
+  max-width: 7px;
+  padding: 17.5px 13.3px;
+  position: relative;
+  span {
+    position: relative;
+    left: -6px;
+  }
+}
+
+/*Service's style's*/
+/*//////////////////////////////
+//////////////////////////////
+//////////////////////////////
+//////////////////////////////
+//////////////////////////////
+*/
+
+#instLab, #techLab, #inSerLab, #exSerCstLab {
+  font-weight: bold;
+  text-align: left;
+  font-size: 16px;
+}
+
+#instHelB, #techHelB, #inSerHelB, #exSerCstHB {
+  font-size: 14px;
+  text-align: left;
+  margin: 20px 0;
+}
+
+.serviceArea {
+  margin-top: 40px;
+}
+
+.servicesList, .serviceItem {
+  width: 100%;
+}
+
+.serBtnItm, .exSerBtn {
+  background-color: white !important;
+  border: solid 1px white;
+  font-family: Post Grotesk;
+  margin-bottom: 3px;
+  padding-top: 10px;
+  border-radius: 3px;
+  text-align: left;
+  padding-left: 22px;
+  width: 100%;
+  height: 31px;
+  font-size: 14px;
+  color: #2B3A42;
+  box-sizing: border-box;
+}
+
+.serBtnItm:hover, .exSerBtn:hover {
+  border: solid 1px #9BCFD0;
+  color: #2B3A42;
+}
+
+.serBtnItm.active, .exSerBtn.active {
+  background-color: #9BCFD0 !important;
+  color: white;
+  font-weight: bold;
+}
+
+#otherServ {
+  border: hidden;
+  background: white !important;
+  text-align: left;
+  margin-top: 7px;
+  padding-left: 22px;
+  font-weight: bold;
+  color: #2B3A42;
+}
+
+#exSerDiv {
+  margin-top: 40px;
+}
+
+#inExSerBtn {
+  padding: 0px;
+  display: flex;
+}
+
+.exSerBtn {
+  text-align: center !important;
+  width: 50%;
+  margin-left: 5px;
+}
+
+#inExtServ {
+  margin-top: 40px;
+}
+
+#inExtServSpace {
+  background-color: #d9eaea;
+}
+
+#inputsExServ {
+  background-color: #d9eaea;
+  margin-bottom: 20px;
+}
+
+#exSrvInAllCnt {
+  padding-bottom: 30px;
+}
+
+#exSrvInSetterCnt, #exSrvInSetCntInputs {
+  position: relative;
+  top: 20px;
+}
+
+#exSerInLab {
+  font-weight: bold;
+  text-align: left;
+  font-size: 14px;
+}
+
+.inputsDivs {
+  padding: 0px 1px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.noBef600Inp {
+  display: none;
+}
+
+#exServDet {
+  border: hidden !important;
+  width: 100%;
+  height: 45px !important;
+  font-size: 13px;
+}
+
+.fileInputCont {
+  background-color: white;
+  border-radius: 4px;
+  height: 45px;
+  font-size: 9px;
+  font-family: Post Grotesk;
+  color: gray;
+}
+
+.fileBtnTxt {
+  padding-top: 12px;
+  font-size: 14px;
+}
+
+.fileExSerCst {
+  display: block !important;
+  height: 45px;
+  opacity: 0;
+  cursor: pointer;
+  position: relative;
+  top: -43px;
+}
+
+#addExServBtn {
+  padding: 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 2px;
+}
+
+.addSerCstEx {
+  background-color: #139699 !important;
+  color: white;
+  width: 100%;
+  font-size: 13px;
+  font-family: Post Grotesk;
+  height: 45px;
+  border-radius: 3px;
+}
+
+#exSrvInTag {
+  background-color: white;
+  height: 53px;
+  margin-bottom: 10px;
+}
+
+.fieldExSrvInCnt {
+  padding: 16px 0;
+  border-right: 2px solid #f7f3f3;
+  text-align: center;
+  height: 100%;
+  font-size: 10px;
+  font-family: Post Grotesk;
+}
+
+.tagLabelExSrv {
+  font-size: 11px;
+  text-align: center;
+  font-family: Post Grotesk;
+  font-weight: bold;
+  position: relative;
+  top: -8px;
+}
+
+.srvDetField {
+  margin: 0 auto;
+  position: relative;
+  top: -8px;
+}
+
+.fieldExSrvInBtn {
+  padding: 0px;
+  text-align: right;
+}
+
+#exSrvInFiNameCnt {
+  border-right: hidden;
+}
+
+#cnlExServBtn {
+  background: #F80853 !important;
+  width: 100%;
+  height: 100%;
+}
+
+/*Detail's style's*/
+/*//////////////////////////////
+//////////////////////////////
+//////////////////////////////
+//////////////////////////////
+//////////////////////////////
+*/
+
+.areaTextInf {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.areaTextInfDet {
+  text-align: left;
+}
+
+.fifthPanHedLab, .cncPol {
+  font-weight: bold;
+  text-align: left;
+  font-size: 16px;
+}
+
+.cncHeB, .fPanHT {
+  font-size: 14px;
+  text-align: left;
+  margin: 10px 0;
+}
+
+.infoAbSpace {
+  font-size: 14px;
+  text-align: left;
+  margin: 20px 0;
+  height: 102px;
+}
+
+.cncPolDiv {
+  position: relative;
+  left: 5%;
+}
+
+.polCncChBx {
+  background-color: #139699 !important;
+  border: hidden;
+}
+
+.polCncChAnch {
+  color: #139699 !important;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*Photo's Gallery style's*/
+/*//////////////////////////////
+//////////////////////////////
+//////////////////////////////
+//////////////////////////////
+//////////////////////////////
+*/
+
+#edAlCnt {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*.phGallEd-Al{
+  background-color: #139699 !important;
+  display: block;
+  text-decoration: none;
+  width: 16%;
+  border-radius:  4px;
+  font-weight: 400;
+  line-height: 31px;
+  font-size: 15px;
+  margin-bottom: 5px;
+  padding: 0;
+  cursor: pointer;
+  color: white;
+}*/
+
+/*.image-categories{
+  text-align: right;
+  margin-bottom: 20px !important;
+  background-color: #dbf0f1 !important;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 0px !important;
+}*/
+
+.gallerieArea {
+  position: relative;
+  top: 30px;
+}
+
+#inFiDropImg {
+  display: block !important;
+}
+
+.DropArea {
+  padding-top: 39px;
+  background-color: white;
+  margin-top: 40px;
+  min-height: 300px !important;
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+
+.dz-Message {
+  font-size: 400%;
+  color: #139699;
+  margin-left: 4%;
+  font-family: Post Grotesk;
+  text-align: center;
+}
+
+.dz-MessageSpan {
+  cursor: pointer !important;
+}
+
+.dz-preview {
+  background-color: #139699 !important;
+  height: 141px;
+  position: relative;
+  top: 4vh;
+  color: white;
+  margin: 0 !important;
+  border: hidden !important;
+}
+
+#subNewSpace {
+  width: 331px;
+  height: 47px;
+  font-family: Post Grotesk;
+  margin-top: 0;
+  border-radius: 5px !important;
+  background-color: #2B3A42 !important;
+  font-size: 20px !important;
+  color: white;
+}
+
+/*//////////Modal styles*/
+
+.editHead {
+  font-family: Post Grotesk;
+  font-weight: Light;
+  font-size: 24px;
+  color: #139699 !important;
+}
+
+.imgModalEdit {
+  width: 100%;
+  height: 300px;
+  background-color: #E6EAE6;
+}
+
+.chBoxCont {
+  text-align: left;
+}
+
+.btnsCont {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+}
+
+.modalEditFooterbtns, .aceptingNwSpaceBtn {
+  background-color: #139699 !important;
+  margin: 10px;
+  color: white;
+  font-family: Post Grotesk;
+  height: 35px;
+  border-radius: 3px;
+  line-height: .5;
+}
+
+.successFrm {
+  padding: 20vh 20vw;
+  background-color: rgba(100, 100, 100, 0.5);
+  background-size: cover;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.acceptsMdl {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.successText {
+  width: 90%;
+  margin: auto;
+  font-size: 13px;
+}
+
+.modalScsslogo {
+  width: 68px;
+  text-align: center;
+  margin: auto;
+  height: 68px;
+  background-color: #A66E68;
+}
+
+.congrats {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 40px;
+}
+
+.modalSuccess {
+  width: 60vw;
+  height: 417px;
+  background-color: white;
+  color: #139699 !important;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: Post Grotesk;
+  padding: 20px;
+  text-align: justify;
+}
+
+.endXBtn {
+  position: absolute;
+  top: 10px;
+  right: -99%;
+  color: #139699 !important;
+  font-size: 15px;
+}
+
+@media (min-width: 470px) {
+  /*Service's style's*/
+  /*//////////////////////////////
+  //////////////////////////////
+  //////////////////////////////
+  */
+  .optBtn {
+    display: block;
+    font-size: 23px;
+    position: relative;
+    left: -2px;
+  }
+  .caret-Down {
+    right: 13%;
+  }
+}
+
+@media (min-width: 600px) {
+  .progressUl {
+    width: 102% !important;
+    position: relative;
+    left: -2.5%;
+  }
+  .progress-indicator {
+    position: relative;
+    left: 1%;
+  }
+  .steps-progress {
+    margin-left: 3.33333% !important;
+    margin-right: 6.66666% !important;
+  }
+  /*///////////////
+  ///////////////
+  First Tab*/
+  .upload-title {
+    left: 4%;
+  }
+  .textAreaFirst, .form-horizontal .form-group {
+    height: 200px;
+  }
+  #spaceName .help-block, #spaceLabels .help-block, #spaceCapacity .help-block {
+    height: 67px;
+  }
+  /*////////////////////////////////////////////
+  ////////////////////////////////////////////
+  Location's Style's*/
+  #spaceLocation {
+    height: 270px;
+  }
+  #ParkingDiv {
+    height: 150px;
+  }
+  #locMap {
+    padding: 0 5px;
+  }
+  #mapHelBPark {
+    height: 73px;
+  }
+  /*////////////////////////////////////////////
+  ////////////////////////////////////////////
+  Service's Style's*/
+  #instLab, #techLab, #inSerLab, #exSerCstLab {
+    height: 35px;
+  }
+  #instHelB, #techHelB, #inSerHelB {
+    height: 102px;
+  }
+  .caret-Down {
+    right: 10%;
+  }
+  .daysItm {
+    width: 14%;
+  }
+  #exSerDiv {
+    margin-top: 70px;
+  }
+  .exSerBtn {
+    width: 212px;
+    margin-left: 5px;
+  }
+  #exSerInLab {
+    font-size: 14px;
+    margin: 10px;
+  }
+  #exServDet {
+    font-size: 14px;
+  }
+  .noBef600Inp {
+    display: block;
+  }
+  .tagLabelExSrv {
+    display: none;
+  }
+  .inputsDivs, #addExServBtn, .fieldExSrvInCnt {
+    /*width: 16.666666667% !important;*/
+    font-size: 12px;
+  }
+  .fileInputCont, #exServDet, .addSerCstEx {
+    height: 53px !important;
+  }
+  .fileExSerCst {
+    height: 53px !important;
+    top: -50px;
+  }
+  .fileBtnTxt {
+    padding-top: 6px;
+    padding-top: 9px;
+    font-size: 13px;
+  }
+  .addSerCstEx {
+    font-size: 15px;
+    padding-left: 14px;
+  }
+  .srvDetField {
+    position: relative;
+    top: -1px;
+  }
+  #cnlExServBtn {
+    width: 100%;
+  }
+  /*////////////////////////////////////////////
+  ////////////////////////////////////////////
+  Availability's Style's*/
+  #from, #until {
+    height: 47px;
+    border: hidden;
+  }
+  .hrsSelect {
+    width: 426px;
+    margin-top: 40px;
+  }
+  .weekDay {
+    width: 90%;
+  }
+  /*////////////////////////////////////////////
+  ////////////////////////////////////////////
+  Gallery's Style's*/
+  .dz-Message {
+    font-size: 500%;
+  }
+  .dz-MessageSpan {
+    position: relative;
+    top: 20px;
+  }
+  .successText {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 766px) {
+  .progressUl {
+    width: 105% !important;
+    position: relative;
+    left: -3.5%;
+  }
+  .progress-indicator {
+    position: relative;
+    left: 1%;
+  }
+  .steps-progress {
+    margin-left: 3.33333% !important;
+    margin-right: 5.33333% !important;
+  }
+  /*/////////////////
+  /////////////////
+  /////////////////
+  First tab*/
+  #spaceName .help-block, #spaceLabels .help-block, #spaceCapacity .help-block {
+    height: 58px;
+  }
+  /*///////////
+  ///////////
+  ///////////
+  ///////////
+  Availabilty's style's*/
+  .authDetail {
+    font-size: 14px;
+  }
+  /*///////////
+  ///////////
+  ///////////
+  ///////////
+  Service's style's*/
+  #instHelB, #techHelB, #inSerHelB {
+    height: 80px;
+  }
+  .fileInputCont, .fieldExSrvInCnt {
+    font-size: 12px;
+  }
+  .delBtnExSrvTag {
+    position: relative;
+    left: -5px;
+  }
+  /*Photo's Gallery style's*/
+  /*//////////////////////////////
+  //////////////////////////////
+  //////////////////////////////
+  //////////////////////////////
+  //////////////////////////////
+  */
+  .successText {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 776px) {
+  .progressUl {
+    width: 102% !important;
+    position: relative;
+    left: -2.5%;
+  }
+  .progress-indicator {
+    position: relative;
+    left: 1%;
+  }
+  .steps-progress {
+    margin-left: 5.33333% !important;
+    margin-right: 8.33333% !important;
+  }
+  /*///////////
+  ///////////
+  ///////////
+  ///////////
+  Service's style's*/
+  .fileBtnTxt {
+    padding: 19px 0 0 1px;
+  }
+  .caret-Down {
+    right: 8%;
+  }
+}
+
+@media (min-width: 783px) {
+  /*#form-el-3{
+    top: 37px;
+  }*/
+  /*////////////////////////////////////////////
+////////////////////////////////////////////
+////////////////////////////////////////////
+////////////////////////////////////////////
+Gallery's Style's*/
+  .dz-Message {
+    font-size: 600%;
+  }
+  .dz-MessageSpan {
+    top: 30px;
+  }
+}
+
+@media (min-width: 819px) {
+  /*/////////
+  ///////////
+  ///////////
+  First Tab*/
+  .eventsType {
+    width: 38%;
+    &:nth-of-type(2) {
+      width: 38%;
+    }
+  }
+  .btn-head {
+    font-size: 380%;
+  }
+  /*///////////
+  ///////////
+  ///////////
+  ///////////
+  Service's style's*/
+  #instHelB, #techHelB, #inSerHelB {
+    height: 65px;
+  }
+}
+
+@media (min-width: 923px) {
+  .btn-head {
+    font-size: 477%;
+  }
+  .eventsType {
+    width: 36%;
+  }
+}
+
+@media (min-width: 992px) {
+  /*Detail's style's*/
+  /*//////////////////////////////
+  //////////////////////////////
+  */
+  .areaTextInf {
+    left: -20% !important;
+  }
+  /*////////////////////
+  ////////////////////
+  Availability styles*/
+  #from, #until {
+    width: 80px;
+  }
+  #minDayHrs {
+    top: 0px;
+  }
+  .hrsSelect {
+    position: relative;
+    top: 0px;
+    width: 30vw;
+  }
+  #addSpacesTime {
+    width: 100%;
+  }
+  /*////////////////////////////////////////////
+////////////////////////////////////////////
+////////////////////////////////////////////
+////////////////////////////////////////////
+Location's Style's*/
+  .locationForm {
+    position: relative;
+    top: -30px;
+  }
+  #mapDiv {
+    padding-left: 27px;
+  }
+}
+
+@media (min-width: 1000px) {
+  div#tabContent {
+    padding: 85px 72px;
+  }
+  /*////////////////////
+  ////////////////////
+  ////////////////////
+  ////////////////////
+  ////////////////////
+  Availability styles*/
+  #from, #until {
+    width: 100%;
+  }
+  .hrsSelect {
+    top: -23px;
+  }
+  #weekSelLabel, #dayHrsLabel {
+    height: 45px;
+  }
+  #weekSelHelB, #dayHrsHelB {
+    height: 68px;
+  }
+  .hrsDefContain {
+    padding: 0;
+  }
+  /*///////////
+  ///////////
+  ///////////
+  ///////////
+  Service's style's*/
+  #instHelB, #techHelB, #inSerHelB {
+    height: 85px;
+  }
+}
+
+@media (min-width: 1150px) {
+  #spaceName .help-block, #spaceLabels .help-block, #spaceCapacity .help-block {
+    font-size: 13px;
+  }
+  .btn-head {
+    font-size: 642%;
+  }
+  .eventsType {
+    width: 32.5%;
+    margin-right: 19px;
+    &:nth-of-type(2) {
+      width: 32.5%;
+    }
+  }
+  /*///////////
+  ///////////
+  ///////////
+  ///////////
+  Service's style's*/
+  #instHelB, #techHelB, #inSerHelB {
+    height: 65px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /*////////////////////////////////////////////
+  ////////////////////////////////////////////
+  ////////////////////////////////////////////
+  ////////////////////////////////////////////
+  Location's Style's*/
+  .locationForm {
+    top: -21px;
+  }
+  #mapHelBPark {
+    height: 73px;
+    margin-bottom: 0px;
+  }
+  /*////////////////////
+  ////////////////////
+  ////////////////////
+  ////////////////////
+  ////////////////////
+  Availability styles*/
+  .hrsSelect {
+    top: -25px;
+  }
+}
+
+@media (min-width: 1218px) {
+  #spaceName .help-block, #spaceLabels .help-block, #spaceCapacity .help-block {
+    font-size: 14px;
+  }
+  #firstNextBtn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+  }
+  .nextButton {
+    position: relative;
+    left: 0%;
+    transform: translate(-0%);
+    -webkit-transform: translate(-0%);
+  }
+  .pager {
+    .next > {
+      a, span {
+        position: relative;
+        left: 0%;
+        transform: translate(-0%);
+        -webkit-transform: translate(-0%);
+      }
+    }
+    .previous > {
+      a, span {
+        position: relative;
+        left: 0%;
+        top: 0%;
+        transform: translate(-0%);
+        -webkit-transform: translate(-0%);
+      }
+    }
+  }
+}

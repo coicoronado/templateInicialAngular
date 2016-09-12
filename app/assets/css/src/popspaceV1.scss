@@ -1,0 +1,255 @@
+// File with styles for the new version of popSpace
+
+@import 'variables';
+/*Estilos traidos a partir de bootstrap para la seccion de "Perfil de espacio"*/
+
+.space_profile a {
+  color: $azul-botones;
+}
+
+button.btnBootstrap.btnBootstrap-default {
+  background-color: $blanco !important;
+  font-size: 1em;
+  width: 100%;
+}
+
+.space_profile.header_pic, .reservation_info.header_pic {
+  height: 60vh;
+}
+
+.space_profile.header_pic, .commentBlock .circle-avatar, .ubicacionProfileEspacioInfo .map, .reservation_info.header_pic {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: center;
+  background-position-x: center;
+}
+
+.space_profile.space_name, .reservation_info.space_name {
+  font-size: 2em;
+}
+
+.verdeTitulo {
+  color: $azul-botones;
+}
+
+.rojoTitulo {
+  color: $error-color;
+}
+
+.space_profile.space_checkout {
+  font-size: 1.5em;
+}
+
+.shareLike i:last-child {
+  margin-left: 5px;
+}
+
+.space_profile {
+  &.stars_rating {
+    color: $azul-botones;
+    .iconSize {
+      font-size: 1.5em;
+    }
+    .empty {
+      color: $gris !important;
+    }
+    i {
+      margin-left: 5px;
+      &:first-child {
+        margin-left: 0px;
+      }
+    }
+  }
+  &.header_prices {
+    /*estios para el tamaño de las fuentes*/
+  }
+}
+
+.checkoutProfileEspacioInfo .checkoutBlock, .reservacionResumen {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.space_profile .serviceBlock, .checkoutProfileEspacioInfo .checkoutBlock, .reservacionResumen {
+  background-color: $gris;
+}
+
+.serviceBlock .row {
+  padding: 10px;
+}
+
+.commentBlock .circle-avatar, .descripcionPeticionInformacionEspacio .circle-avatar {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+  padding-top: 100%;
+  border-radius: 50%;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+button.btnBootstrap.btnBootstrap-default {
+  &.reservarBoton, &.okBoton {
+    background-color: $azul-botones !important;
+  }
+  &.cancelBoton {
+    background-color: $error-color !important;
+  }
+  &.reservarBoton, &.okBoton, &.cancelBoton {
+    height: 5vh;
+    color: $blanco !important;
+  }
+  &.reservarBoton {
+    font-size: 1.5em;
+  }
+  &.okBoton, &.cancelBoton {
+    font-size: 1.3em;
+  }
+}
+
+.titulosSeccion .well {
+  font-size: 1.3em;
+}
+
+.ubicacionProfileEspacioInfo .map {
+  height: 80vh;
+}
+
+.entryDispo {
+  margin-left: 10px;
+  &.clearLeft {
+    margin-left: 0;
+  }
+}
+
+.clearLeft {
+  clear: left;
+}
+
+.input-group-addon.no-style {
+  background-color: $blanco;
+}
+
+/*estilos para informacion de solicitud*/
+
+.informacionDetalleSolicitud {
+  span, div {
+    margin-top: 5px;
+  }
+  span:first-child {
+    margin-top: 0;
+  }
+}
+
+.inputSimulado {
+  .well {
+    padding: 5px !important;
+    border-radius: 0 !important;
+    border-color: $azul-titulos;
+    background-color: $blanco;
+    margin-bottom: 0 !important;
+  }
+  &.extras {
+    .well {
+      border-color: $blanco;
+      background-color: $azul-titulos !important;
+      /*aca encontre otro tono definir cual es $azul-titulos*/
+      color: $blanco;
+    }
+    &:last-child .well {
+      border-left-color: transparent;
+    }
+  }
+}
+
+.reservation_info.inputsInfo {
+  line-height: 26px;
+}
+
+/*estilos para dar espacio y margenes especificos*/
+
+.espacio {
+  &.eup1 {
+    margin-top: 1vh !important;
+  }
+  &.eup2 {
+    margin-top: 2vh !important;
+  }
+  &.eup3 {
+    margin-top: 3vh !important;
+  }
+  &.eup4 {
+    margin-top: 4vh !important;
+  }
+  &.eup5 {
+    margin-top: 5vh !important;
+  }
+  &.edown1 {
+    margin-bottom: 1vh !important;
+  }
+  &.edown2 {
+    margin-bottom: 2vh !important;
+  }
+  &.edown3 {
+    margin-bottom: 3vh !important;
+  }
+  &.edown4 {
+    margin-bottom: 4vh !important;
+  }
+  &.edown5 {
+    margin-bottom: 5vh !important;
+  }
+}
+
+.inlineBlock {
+  display: inline-block;
+}
+
+.displayBlock {
+  display: block;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+.error {
+  color: $error-color;
+}
+
+.removeMargins {
+  &.top {
+    margin-top: 0 !important;
+  }
+  &.down {
+    margin-down: 0 !important;
+  }
+}
+
+.row.borderDown {
+  border-bottom: 1px solid $gris-borders;
+  padding-bottom: 10px;
+  &:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+.viewContentAngular{height: 100%;}
+
+.sharedContent{float:left; width: 100%;
+  .shared{
+    float:left;
+  }
+}

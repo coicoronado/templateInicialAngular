@@ -1,0 +1,74 @@
+// File with styles for the new version of popSpace
+@import 'variables';
+
+// mixins
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+
+/* Styles for the login page */
+
+.btn-login .fa-sign-in{
+  font-size: 15px !important;
+  line-height: 20px !important;
+}
+
+.facebook-button{
+  i{padding: 10px 15px !important;}
+}
+.twitter-button{
+  i{padding: 10px 12px !important;}
+}
+.google-button{
+  i{padding: 10px 10px !important;}
+}
+.linkedin-button{
+  i{padding: 8px 13px !important;}
+}
+
+.description{color:$blanco;}
+
+.login-content{
+  hr{ border-top: 1px solid $grisHR}
+  .btn-primary{
+    background-color: $azul-botones;
+    border-color: $azul-botones;
+    color:$blancoBotones;
+
+  }
+}
+
+.login-page{height: 100%;}
+
+.login-form{
+  .input-group{
+    .input-group-addon{color: $placeholder;}
+     .form-control{ color:$placeholder;
+      @include placeholder{color:$placeholder};
+    }
+  }
+}
+
+.btn-login{
+  .fa-angle-right{ font-size: 20px;}
+}
